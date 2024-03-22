@@ -6,6 +6,8 @@ class Program
 {
     public static void Main(string[] args)
     {
+        Console.WriteLine("Welcome to Wanda's Cafe!\nAs the barista you can type today's discount and the system will print out the menu with the discounted prices.\n\n");
+        Console.Write("What's today's discount[%]? ");
         int discount = Convert.ToInt32(Console.ReadLine());
         //int discount = 10;
 
@@ -22,6 +24,7 @@ class Program
             double discountedValue = kvp.Value - (kvp.Value * ((double)discount / 100));
             Console.WriteLine("{0}: {1}", kvp.Key, discountedValue);
         }
+/*
         //Challenge - reimplement using coffee.Keys.ToArray()
         Console.WriteLine("\nLet's try to do this again!");
         string[] keys = coffee.Keys.ToArray(); //A temporary list of sorts
@@ -36,7 +39,7 @@ class Program
             double discountedValue = coffee[keys[i]] - (coffee[keys[i]] * ((double)discount / 100));
             Console.WriteLine("{0}: {1}", keys[i], discountedValue);
         }
-
+*/
     }
 }
 
